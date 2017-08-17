@@ -24,6 +24,7 @@ end
 
 Organization.create!(language:Language.first, app_country:AppCountry.first, name:'Awesome Org', time_zone:Time.zone.now)
 Subject.create!(name:'Math', level:'Advanced')
+Subject.create!(name:'English', level:'Beginner')
 Teacher.create!(languages:[Language.first], organization:Organization.first, first_name:'Bob', last_name:'Smith', email:'bob@smith.com', skype_id:'bobsmith', linkedin:'bobsmith@linkedin.com', description:'Bob is cool.', time_zone:Time.zone.now)
 Student.create!(subjects:[Subject.first], languages:[Language.first], organization:Organization.first, first_name:'Zaza', last_name:'Honey', email:'zaza@honey.com', skype_id:'zazahoney', description:'Zaza is cool.', time_zone:Time.zone.now)
 CountryType.create!(teacher:Teacher.first, student:Student.first, app_country:AppCountry.first, kind:'residence')
