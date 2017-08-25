@@ -12,16 +12,16 @@ class TeachersController < ApplicationController
   #   render json: @teacher
   # end
 
-  # # POST /teachers
-  # def create
-  #   @teacher = Teacher.new(teacher_params)
+  # POST /teachers
+  def create
+    @teacher = Teacher.new(teacher_params)
 
-  #   if @teacher.save
-  #     render json: @teacher, status: :created, location: @teacher
-  #   else
-  #     render json: @teacher.errors, status: :unprocessable_entity
-  #   end
-  # end
+    if @teacher.save
+      render json: @teacher, status: :created, location: @teacher
+    else
+      render json: @teacher.errors, status: :unprocessable_entity
+    end
+  end
 
   # # PATCH/PUT /teachers/1
   # def update
