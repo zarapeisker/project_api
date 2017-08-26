@@ -29,7 +29,7 @@ Subject.create!(name:'English', level:'Beginner')
 Subject.create!(name:'Science', level:'Intermediate')
 Subject.create!(name:'Social Studies', level:'Beginner')
 
-Teacher.create!(languages:[Language.first], organization:Organization.first, first_name:'Bob', last_name:'Smith', email:'bob@smith.com', skype_id:'bobsmith', linkedin:'bobsmith@linkedin.com', description:'Bob is cool.', time_zone:Time.zone.now)
+Teacher.create!(languages:[Language.first], organization:Organization.first, given_name:'Bob', family_name:'Smith', name: 'Bob Smith', email:'bob@smith.com', picture:'www.edrefuge.org/assets/images/tutor_2.jpg', skype_id:'bobsmith', linkedin:'bobsmith@linkedin.com', description:'Bob is cool.', time_zone:Time.zone.now)
 Student.create!(subjects:[Subject.first], languages:[Language.first], organization:Organization.first, first_name:'Zaza', last_name:'Honey', email:'zaza@honey.com', skype_id:'zazahoney', description:'Zaza is cool.', time_zone:Time.zone.now)
 CountryType.create!(teacher:Teacher.first, student:Student.first, app_country:AppCountry.first, kind:'residence')
 Review.create!(stars:5, text:'This is one awesome person!')

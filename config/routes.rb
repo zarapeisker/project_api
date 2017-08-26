@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 	resources :languages, only: [:index]  do
 	  resources :teachers, only: [:index], controller: 'language_teachers'
 	end
-	resources :teachers, only: [:index, :create]
+	resources :teachers, only: [:index, :create, :show]
 
 	resources :app_countries, only: [:index]  do
 	  resources :teachers, only: [:index], controller: 'country_teachers'

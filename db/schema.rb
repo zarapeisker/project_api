@@ -128,9 +128,11 @@ ActiveRecord::Schema.define(version: 20170524050730) do
 
   create_table "teachers", force: :cascade do |t|
     t.bigint "organization_id"
-    t.string "first_name"
-    t.string "last_name"
+    t.string "given_name"
+    t.string "family_name"
+    t.string "name"
     t.string "email"
+    t.string "picture"
     t.string "skype_id"
     t.string "linkedin"
     t.text "description"
